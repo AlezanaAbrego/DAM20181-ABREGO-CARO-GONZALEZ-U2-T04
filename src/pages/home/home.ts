@@ -60,7 +60,7 @@ update(todo, i) {
   delete(todo, i) {
     let alert = this.alertCtrl.create({
       title: 'Eliminar Tarea',
-      message: ¿Seguro que deseas eliminar ${todo.nombre}?,
+      message: `¿Seguro que deseas eliminar ${todo.nombre}?`,
       buttons: [
         {
           text: 'Cancelar',
