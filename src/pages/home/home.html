@@ -15,10 +15,10 @@
         <ion-label>{{todo.fecha}}</ion-label>
       </ion-item>
       <ion-item-options>
-        <button ion-button icon-only color="primary">
+        <button ion-button icon-only color="primary" (click)="update(todo, i)">
           <ion-icon name="sync"></ion-icon>
         </button>
-        <button ion-button icon-only color="danger">
+        <button ion-button icon-only color="danger" (click)="delete(todo, i)">
           <ion-icon name="trash"></ion-icon>
         </button>
       </ion-item-options>
@@ -26,15 +26,9 @@
   </ion-list>
 
 <ion-fab right bottom>
-      <button ion-fab (click)="add()">
-        <ion-icon name="add"></ion-icon>
-      </button>
-<button ion-button icon-only color="primary" (click)="update(todo, i)">
-          <ion-icon name="sync"></ion-icon>
-        </button>
-        <button ion-button icon-only color="danger" (click)="delete(todo, i)">
-          <ion-icon name="trash"></ion-icon>
-        </button>
-    </ion-fab>
+    <button ion-fab (click)="add()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
 
 </ion-content>
